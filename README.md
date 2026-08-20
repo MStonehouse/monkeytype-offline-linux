@@ -10,15 +10,7 @@ No account • No ads • No analytics • No internet connection required
 
 ## Screenshot
 
-<!-- Add a screenshot of the application here.
-
-Example:
-
 ![Monkeytype Offline Desktop](docs/images/IMG_7028.jpg)
-
--->
-
-*Screenshot coming soon.*
 
 ---
 
