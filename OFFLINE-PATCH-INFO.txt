@@ -1,0 +1,10 @@
+Monkeytype Offline Slim v3
+
+Safe offline changes:
+- Footer links removed; theme selector retained.
+- PSA/backend startup lookup disabled (returns empty list).
+- Offline connection banner disabled.
+- Firebase initialization lifecycle retained, but its expected offline dev banner is suppressed.
+- Expected network failures do not become red DEV error banners.
+
+Important: core startup/auth readiness code is otherwise unchanged.

@@ -1,0 +1,15 @@
+/* Offline desktop edition: hide network/account-only surfaces without touching
+   Monkeytype's themes or practice styling. */
+[data-nav-item="login"],
+[data-nav-item="account"],
+[data-nav-item="leaderboards"],
+[data-nav-item="alerts"],
+.loginTip,
+.dailyLeaderboard,
+.advertisement,
+#ad-footer-wrapper,
+#ad-footer-small-wrapper,
+#ad-vertical-left-wrapper,
+#ad-vertical-right-wrapper {
+  display: none !important;
+}

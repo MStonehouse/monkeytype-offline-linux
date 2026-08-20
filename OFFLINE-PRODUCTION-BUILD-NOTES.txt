@@ -1,0 +1,11 @@
+Offline production build fixes:
+- frontend/.env.production supplies the build-time RECAPTCHA_SITE_KEY placeholder expected by Monkeytype's Vite config.
+- frontend/src/ts/constants/firebase-config-live.ts is an offline production shim required by Monkeytype's production alias.
+- No live Firebase project credentials are included.
+
+Final cleanup pass (v5):
+- Startup merch banner disabled by removing its startup import/call.
+- Cookie preferences control removed from Settings.
+- First-run offline cookie defaults remain security=true, analytics=false, sentry=false, so no web consent banner is required.
+- README expanded with GPL-3.0 attribution and public-derivative notes.
+- NOTICE.md added to identify upstream Monkeytype and the offline desktop modifications.
