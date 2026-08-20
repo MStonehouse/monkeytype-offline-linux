@@ -51,6 +51,9 @@ jobs:
       - name: Install JavaScript dependencies
         run: pnpm install --frozen-lockfile
 
+      - name: Build internal packages
+        run: pnpm build-pkg
+
       - name: Build frontend
         env:
           RECAPTCHA_SITE_KEY: offline-disabled
