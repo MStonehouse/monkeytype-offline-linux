@@ -1,7 +1,6 @@
 import { JSXElement } from "solid-js";
 
 import { restartTestEvent } from "../../../events/test";
-import { prefetchAboutPage } from "../../../queries/prefetch";
 import { getActivePage } from "../../../states/core";
 import { getFocus } from "../../../states/test";
 import { cn } from "../../../utils/cn";
@@ -40,9 +39,6 @@ export function Nav(): JSXElement {
         dataset={{ "data-nav-item": "about" }}
         href="/about"
         router-link
-        onMouseEnter={() => {
-          prefetchAboutPage();
-        }}
       />
       <Button
         variant="text"

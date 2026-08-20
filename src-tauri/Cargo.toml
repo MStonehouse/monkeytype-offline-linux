@@ -1,6 +1,6 @@
 [package]
 name = "monkeytype-offline"
-version = "1.0.0"
+version = "1.0.1"
 description = "Monkeytype Offline desktop wrapper"
 authors = ["Mike Stonehouse"]
 license = "GPL-3.0"

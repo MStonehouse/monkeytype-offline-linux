@@ -2,6 +2,17 @@
 
 All notable changes to Monkeytype Offline Desktop will be documented here.
 
+## 1.0.1 - 2026-08-19
+
+### Fixed
+
+- Replaced the server-dependent About page with a fully local offline About page.
+- Removed About-page prefetching so the information button no longer initiates server-dependent work.
+
+### Changed
+
+- Removed the unavailable Custom Text test mode from the desktop and mobile mode selectors.
+
 ## 1.0.0 - 2026-08-19
 
 ### Added

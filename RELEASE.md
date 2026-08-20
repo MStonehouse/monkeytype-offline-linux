@@ -1,15 +1,19 @@
-# Release Checklist
+# Monkeytype Offline Desktop v1.0.1
 
-Use this checklist when publishing a GitHub release of Monkeytype Offline Desktop.
+Maintenance release for the offline Linux desktop edition.
 
-- [ ] Build from a clean checkout of the release commit/tag.
-- [ ] Run `./BUILD-DEB.sh` and confirm the `.deb` is produced.
-- [ ] Install the `.deb` on a Debian-based test system with `sudo apt install ./<package>.deb`.
-- [ ] Confirm the app launches from the application menu.
-- [ ] Confirm typing tests, settings, themes and results work without an internet connection.
-- [ ] Confirm account/leaderboard UI, cookie prompts, advertisements and the merch banner are absent.
-- [ ] Confirm `LICENSE` and `NOTICE.md` are present in the repository and Debian package.
-- [ ] Tag the exact source revision used for the binary build.
-- [ ] Create a GitHub Release from that tag.
-- [ ] Attach the `.deb` installer and, if desired, the AppImage.
-- [ ] Keep the corresponding source for that tag publicly available under GPL-3.0.
+## Changes
+
+- Fixed the information/About control by replacing the server-dependent About page with a fully local page.
+- Removed About-page prefetching.
+- Removed the unavailable Custom Text test mode from desktop and mobile mode selectors.
+
+## Packaging
+
+Build the Debian package with `./BUILD-DEB.sh`.
+
+The GitHub Actions `Build Linux DEB` workflow can also produce the release artifact.
+
+## License
+
+GNU General Public License v3.0. See `LICENSE` and `NOTICE.md`.
