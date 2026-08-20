@@ -14,7 +14,7 @@ No account • No ads • No analytics • No internet connection required
 
 Example:
 
-![Monkeytype Offline Desktop](docs/images/monkeytype-offline.png)
+![Monkeytype Offline Desktop](docs/images/IMG_7028.jpg)
 
 -->
 
