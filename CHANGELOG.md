@@ -2,6 +2,16 @@
 
 All notable changes to Monkeytype Offline Desktop will be documented here.
 
+## 1.0.2 - 2026-08-20
+
+### Changed
+
+- Replaced the original Monkeytype header mark with a keyboard-based offline desktop mark.
+- Changed the in-app header branding to `monkeytype offline`.
+- Replaced Linux/Tauri application icons and browser/PWA icons with the new keyboard branding.
+- Updated offline page metadata and removed unnecessary web preconnect branding.
+- Added Tabler Icons MIT attribution to `NOTICE.md`.
+
 ## 1.0.1 - 2026-08-19
 
 ### Fixed

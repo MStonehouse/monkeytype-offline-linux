@@ -1,18 +1,19 @@
-# Monkeytype Offline Desktop v1.0.1
+# Monkeytype Offline Desktop v1.0.2
 
-Maintenance release for the offline Linux desktop edition.
+Branding maintenance release for the offline Linux desktop edition.
 
 ## Changes
 
-- Fixed the information/About control by replacing the server-dependent About page with a fully local page.
-- Removed About-page prefetching.
-- Removed the unavailable Custom Text test mode from desktop and mobile mode selectors.
+- Replaced the upstream Monkeytype header mark with a keyboard-based mark.
+- Changed the visible header title to `monkeytype offline`.
+- Added theme-aware coloring to the new in-app keyboard mark.
+- Replaced Tauri/Linux and browser/PWA icons with matching keyboard branding.
+- Updated offline metadata and removed unnecessary web preconnects.
+- Added Tabler Icons MIT attribution to `NOTICE.md`.
 
 ## Packaging
 
 Build the Debian package with `./BUILD-DEB.sh`.
-
-The GitHub Actions `Build Linux DEB` workflow can also produce the release artifact.
 
 ## License
 
