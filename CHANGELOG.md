@@ -2,6 +2,12 @@
 
 All notable changes to Monkeytype Offline Desktop will be documented here.
 
+## 1.0.3 - 2026-08-20
+
+### Fixed
+
+- Fixed header spacing so the `monkeytype offline` title has sufficient room and no longer overlaps adjacent navigation elements.
+
 ## 1.0.2 - 2026-08-20
 
 ### Changed
