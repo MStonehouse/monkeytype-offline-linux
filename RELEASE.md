@@ -1,15 +1,13 @@
-# Monkeytype Offline Desktop v1.0.2
+# Monkeytype Offline Desktop v1.0.3
 
 Branding maintenance release for the offline Linux desktop edition.
+# Monkeytype Offline Desktop v1.0.3
+
+Small layout maintenance release for the offline Linux desktop edition.
 
 ## Changes
 
-- Replaced the upstream Monkeytype header mark with a keyboard-based mark.
-- Changed the visible header title to `monkeytype offline`.
-- Added theme-aware coloring to the new in-app keyboard mark.
-- Replaced Tauri/Linux and browser/PWA icons with matching keyboard branding.
-- Updated offline metadata and removed unnecessary web preconnects.
-- Added Tabler Icons MIT attribution to `NOTICE.md`.
+- Fixed header spacing so the `monkeytype offline` title has sufficient room and no longer overlaps adjacent navigation elements.
 
 ## Packaging
 
