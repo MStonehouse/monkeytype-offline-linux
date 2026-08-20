@@ -360,7 +360,7 @@ export default defineConfig(({ mode }): UserConfig => {
         : [
             {
               find: /\/constants\/firebase-config$/,
-              replacement: "/constants/firebase-config-live",
+              replacement: "/constants/firebase-config-example",
             },
           ],
     },
