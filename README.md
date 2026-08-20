@@ -10,7 +10,7 @@ No account • No ads • No analytics • No internet connection required
 
 ## Screenshot
 
-![Monkeytype Offline Desktop](docs/images/IMG_7029.jpg)
+![Monkeytype Offline Desktop](docs/images/IMG_7030.jpg)
 
 ---
 
