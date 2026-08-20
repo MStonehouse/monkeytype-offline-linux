@@ -52,6 +52,9 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Build frontend
+        env:
+          RECAPTCHA_SITE_KEY: offline-disabled
+          SERVER_OPEN: "false"
         run: pnpm --filter @monkeytype/frontend exec vite build
 
       - name: Build Debian package
