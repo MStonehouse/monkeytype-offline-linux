@@ -89,6 +89,25 @@ sudo apt remove monkeytype-offline
 
 ---
 
+## Arch Linux / Manjaro / EndeavourOS
+
+Build a native Arch package from source:
+
+```bash
+./INSTALL-ARCH-DEPENDENCIES.sh
+./BUILD-ARCH.sh
+```
+
+The build produces a package under `packaging/arch/` that can be installed with:
+
+```bash
+sudo pacman -U packaging/arch/monkeytype-offline-*.pkg.tar.zst
+```
+
+The Arch build requires Node.js 24.x. The build script checks the Node major version before compiling.
+
+---
+
 # Privacy and Networking
 
 Monkeytype Offline Desktop is designed for local typing practice.
