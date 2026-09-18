@@ -94,7 +94,7 @@ jobs:
             libayatana-appindicator \
             librsvg \
             patchelf \
-            nodejs-lts-jod \
+            nodejs-lts-krypton \
             npm \
             rustup
 
