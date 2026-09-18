@@ -1,4 +1,4 @@
-name: Build Linux DEB
+name: Build Linux Packages
 
 on:
   workflow_dispatch:
@@ -11,6 +11,7 @@ permissions:
 
 jobs:
   build-deb:
+    name: Debian / Ubuntu
     runs-on: ubuntu-22.04
 
     steps:
@@ -69,4 +70,75 @@ jobs:
         with:
           name: monkeytype-offline-deb
           path: src-tauri/target/release/bundle/deb/*.deb
+          if-no-files-found: error
+
+  build-arch:
+    name: Arch Linux
+    runs-on: ubuntu-22.04
+    container:
+      image: archlinux:latest
+
+    steps:
+      - name: Install Arch build dependencies
+        run: |
+          pacman -Syu --noconfirm
+          pacman -S --needed --noconfirm \
+            base-devel \
+            git \
+            curl \
+            wget \
+            file \
+            openssl \
+            gtk3 \
+            webkit2gtk-4.1 \
+            libayatana-appindicator \
+            librsvg \
+            patchelf \
+            nodejs-lts-jod \
+            npm \
+            rustup
+
+      - name: Check out source
+        uses: actions/checkout@v4
+
+      - name: Set up Rust
+        run: |
+          rustup default stable
+          echo "$HOME/.cargo/bin" >> "$GITHUB_PATH"
+
+      - name: Enable pnpm
+        run: |
+          npm install -g pnpm@11.21.0
+
+      - name: Install Tauri CLI
+        run: cargo install tauri-cli --version '^2' --locked
+
+      - name: Install JavaScript dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Build internal packages
+        run: pnpm build-pkg
+
+      - name: Build frontend
+        env:
+          RECAPTCHA_SITE_KEY: offline-disabled
+          SERVER_OPEN: "false"
+        run: pnpm --filter @monkeytype/frontend exec vite build
+
+      - name: Build Tauri executable
+        working-directory: src-tauri
+        run: cargo tauri build --no-bundle
+
+      - name: Build Arch package
+        run: |
+          useradd -m builder
+          chown -R builder:builder "$GITHUB_WORKSPACE"
+          cd packaging/arch
+          runuser -u builder -- makepkg --noconfirm
+
+      - name: Upload Arch package
+        uses: actions/upload-artifact@v4
+        with:
+          name: monkeytype-offline-arch
+          path: packaging/arch/*.pkg.tar.zst
           if-no-files-found: error
