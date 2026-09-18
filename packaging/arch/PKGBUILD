@@ -1,5 +1,5 @@
 pkgname=monkeytype-offline
-pkgver=1.0.3
+pkgver=1.1.0
 pkgrel=1
 pkgdesc="Unofficial offline-focused Linux desktop edition of Monkeytype"
 arch=('x86_64')
